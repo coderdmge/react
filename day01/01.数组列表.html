@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        class App extends React.Component {
+            constructor() {
+                super()
+                this.state = {
+                    message: "hello world",
+                    movies: ["快乐星球" , "时间简史" , "react", "动漫"]
+                }
+            }
+            render() {
+                return (
+                    <div>
+                        <h2>电影列表</h2>
+                        <ul>
+                                {this.state.movies.map(function(item) {
+                                    return <li>{item}</li>
+                                })}
+                            </ul>
+                    </div>
+                )
+            }
+        }
+        
+        ReactDOM.render(<App/> ,document.getElementById("app") )
+    </script>
+    
+</body>
+</html>

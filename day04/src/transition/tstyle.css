@@ -1,0 +1,17 @@
+.g-enter {
+    opacity: 0;
+}
+.g-enter-active {
+    opacity: 1;
+    transition: opacity 1000ms;
+}
+.g-enter-done {
+    color: orange;
+}
+.g-exit {
+    opacity: 1;
+}
+.g-exit-active {
+    opacity: 0;
+    transition: opacity 1000ms;
+}

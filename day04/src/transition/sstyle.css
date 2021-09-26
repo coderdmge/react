@@ -1,0 +1,17 @@
+.btn-enter {
+    opacity: 0;
+    transform: translateX(100%);
+}
+.btn-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 400ms, transform 400ms;
+}
+.btn-exit {
+    opacity: 1;
+}
+.btn-exit-active {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 400ms, transform 400ms;
+}

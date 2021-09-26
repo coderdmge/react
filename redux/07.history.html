@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/home">首页</a>
+    <a href="/about">关于</a>
+    <div>
+
+    </div>
+    <script>
+        var div = document.getElementsByTagName("div")[0]
+        var allA = document.getElementsByTagName("a")
+          for(let i of allA) {
+            i.addEventListener("click", function(e) {
+            e.preventDefault()
+            const href = i.getAttribute("href")
+            history.pushState({}, "" , href)
+            changeUrl()
+        })
+    }
+    window.addEventListener("popstate", changeUrl)
+   function changeUrl () {
+        switch(location.pathname) {
+            case "/home" :
+                div.innerHTML = "首页"
+                break;
+            case "/about" :
+                div.innerHTML = "关于"
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+.item {
+    display: flex;
+   
+    text-align:  center;
+}
+.left, .center, .right {
+    flex: 1;
+    height: 42px;
+    line-height: 42px;
+}
+.left {
+    background-color: red;
+    vertical-align: top;
+}
+.center {
+    background-color: yellow;
+}
+.right {
+    background-color: blue;
+}
